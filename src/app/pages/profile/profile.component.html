@@ -1,0 +1,22 @@
+<dx-data-grid *ngIf="service.currentUser === 'admin@admin.com'; else other_content"
+  [dataSource]="service.movies"
+>
+  <dxo-editing
+    mode="cell"
+    refreshMode="repaint"
+    [useIcons]="true"
+    [allowAdding]="true"
+    [allowUpdating]="true"
+    [allowDeleting]="true">
+  </dxo-editing>
+</dx-data-grid>
+
+
+
+<ng-template #other_content>
+  <h3>you are not recognized!!!. logout and then login with a random username or password (remember admin@admin.com is the
+    admin user and also remember that reloading will destroy your changes because there is no database)</h3>
+  <h2>
+    also it is possible that you have not permission. login with admin@admin.com
+  </h2>
+</ng-template>

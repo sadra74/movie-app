@@ -50,6 +50,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/themes/generated/theme.base.css",
+              "src/themes/generated/theme.additional.css",
+              "src/dx-styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -73,8 +78,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -145,6 +150,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "demo"
+    }
+  },
+  "defaultProject": "demo",
+  "cli": {
+    "analytics": false
+  }
 }
